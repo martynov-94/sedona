@@ -9,15 +9,15 @@
 
   <body>
     <header class="page-header">
-      <a href="index.html">
-        <img class="site-logo" src="#" alt="Логотип компании">
+      <a class="logo-link" href="index.html">
+        <img class="logo-image" src="#" alt="Логотип компании">
       </a>
-      <nav class="site-navigation">
-        <ul class="site-navigation-list">
-          <li class="site-navigation-item site-navigation-item-current"><a href="index.html"
+      <nav class="navigation">
+        <ul class="navigation-list">
+          <li class="navigation-item"><a class="navigation-link navigation-link-current" href="index.html"
               aria-current="page">Главная</a></li>
-          <li class="site-navigation-item"><a href="#">О Седоне</a></li>
-          <li class="site-navigation-item"><a href="#">Гостиницы</a></li>
+          <li class="navigation-item"><a class="navigation-link" href="#">О Седоне</a></li>
+          <li class="navigation-item"><a class="navigation-link" href="#">Гостиницы</a></li>
         </ul>
       </nav>
       <ul class="user-menu">
@@ -39,12 +39,12 @@
 
     <main class="main-part">
       <section class="hero">
-        <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
+        <h1 class="visually-hidden">Сайт города Седона</h1>
         <img class="hero-image" src="#" alt="Вид с высоты птичьего полёта на горы в Седоне с надписью 'Welcome to the gorgeous Sedona, because the Grand Canyon sucks!'">
-        <p class="hero-main-point">
+        <p class="hero-main-point main-point">
           Седона — небольшой городок в Аризоне, заслуживающий большего!
         </p>
-        <p class="hero-secondary-point">
+        <p class="hero-secondary-point secondary-point">
           Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!
         </p>
       </section>
@@ -77,13 +77,11 @@
         </ul>
       </section>
 
-      <section class="call-to-visit">
-        <h2 class="call-to-visit-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
-        <p class="call-to-visit-description">Опытный персонал и качественное обслуживание!</p>
-      </section>
-
       <section class="features">
         <h2 class="visually-hidden">Что вы получите во время поездки</h2>
+        <p class="features-main-point main-point">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
+        <p class="features-secondary-point secondary-point">Опытный персонал и качественное обслуживание!</p>
+
         <ul class="features-list">
           <li class="features-item">
             <h3 class="features-item-title">Жильё</h3>
@@ -101,16 +99,16 @@
       </section>
 
       <section class="cta">
-        <h2 class="cta-title">Заинтересовались?</h2>
-        <p class="cta-description">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <h2 class="visually-hidden">Поиск гостиницы</h2>
+        <p class="cta-main-point main-point">Заинтересовались?</h2>
+        <p class="cta-secondary-point secondary-point">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <button class="cta-btn" type="button">Поиск гостиницы в Седоне</button>
       </section>
 
       <section class="subscription">
-        <h2 class="subscription-title">
-          Подпишитесь на рассылку
-        </h2>
-        <p class="subscription-description">
+        <h2 class="visually-hidden">Подписка на рассылку</h2>
+        <p class="subscription-main-point main-point main-point-light">Подпишитесь на рассылку</h2>
+        <p class="subscription-secondary-point secondary-point secondary-point-light">
           Только полезная информация и никакого спама, честное бойскаутское!
         </p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru/">
