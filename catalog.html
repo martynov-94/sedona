@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная страница</title>
+    <title>Каталог</title>
   </head>
 
   <body>
@@ -14,10 +14,9 @@
       </a>
       <nav class="site-navigation">
         <ul class="site-navigation-list">
-          <li class="site-navigation-item"><a href="index.html"
-              aria-current="page">Главная</a></li>
+          <li class="site-navigation-item"><a href="index.html">Главная</a></li>
           <li class="site-navigation-item"><a href="#">О Седоне</a></li>
-          <li class="site-navigation-item site-navigation-item-current"><a>Гостиницы</a></li>
+          <li class="site-navigation-item site-navigation-item-current"><a aria-current="page">Гостиницы</a></li>
         </ul>
       </nav>
       <ul class="user-menu">
@@ -39,11 +38,108 @@
 
     <main class="main-part">
       <section class="search-settings">
+        <h1 class="search-settings-title">Гостиницы седоны</h1>
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link" href="index.html">
+              <span class="visually-hidden">Домашняя страница</span>
+              <img class="home-icon" src="#" width="" height="" alt="Домашняя страница">
+            </a>
+          </li>
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link breadcrumbs-link-current" href="#">
+              Гостиницы
+            </a>
+          </li>
+        </ul>
 
+        <form class="search-settings-form" action="https://echo.htmlacademy.ru/">
+          <fieldset class="search-settings-filter">
+            <span class="search-settings-form-title">Инфраструктура</span>
+            <label>
+              <input type="checkbox" name="pool" checked> Бассейн
+            </label>
+            <label>
+              <input type="checkbox" name="parking-lot" checked> Парковка
+            </label>
+            <label>
+              <input type="checkbox" name="wi-fi"> Wi-Fi
+            </label>
+          </fieldset>
+          <fieldset class="search-settings-filter">
+            <span class="search-settings-form-title">Тип жилья</span>
+            <label><input type="radio" name="house-type" value="hotel" checked> Гостиница</label>
+            <label><input type="radio" name="house-type" value="motel"> Отель</label>
+            <label><input type="radio" name="house-type" value="apartment"> Апартаменты</label>
+          </fieldset>
+          <fieldset class="search-settings-filter">
+            <span class="search-settings-form-title">Стоимость, ₽:</span>
+            <input type="number" name="price-from" placeholder="от" min="0" step="100" value="0">
+            <input type="number" name="price-to" placeholder="до" min="0" step="100" value="9000">
+            <input type="range" min="0" max="10000" value="8000" step="100">
+          </fieldset>
+          <fieldset>
+            <input class="button button-submit" type="submit" value="Применить">
+            <input class="button button-reset" type="reset" value="Сбросить">
+          </fieldset>
+        </form>
       </section>
 
-      <section class="hotels-catalog">
-
+      <section class="hotels">
+        <div class="view-settings">
+          <h2 class="view-settings-title">Найдено гостиниц: </h2>
+          <span class="hotels-counter">38</span>
+          <select name="sorting-type">
+            <option value="from-cheap">Сначала дешёвые</option>
+            <option value="from-expensive">Сначала дорогие</option>
+          </select>
+          <ul class="view-types-list">
+            <li class="view-types-item">
+              <a class="view-type view-type-tile" href="catalog.html?view=tile">
+                <img class="view-type-icon" src="#" width="" height="" alt="Сетка">
+              </a>
+            </li>
+            <li class="view-types-item">
+              <a class="view-type view-type-card" href="catalog.html?view=card">
+                <img class="view-type-icon" src="#" width="" height="" alt="Карточка">
+              </a>
+            </li>
+            <li class="view-types-item">
+              <a class="view-type view-type-list" href="catalog.html?view=list">
+                <img class="view-type-icon" src="#" width="" height="" alt="Список">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <ul class="hotels-list">
+          <li class="hotels-item hotel-card">
+            <img>
+            <h3></h3>
+          </li>
+          <li class="hotels-item hotel-card"></li>
+          <li class="hotels-item hotel-card"></li>
+          <li class="hotels-item hotel-card"></li>
+        </ul>
+        <ul class="pagination">
+          <li class="pagination-item pagination-item-current">
+            <a aria-current="page">1</a>
+          </li>
+          <li class="pagination-item">
+            <a href="">2</a>
+          </li>
+          <li class="pagination-item">
+            <a href="">3</a>
+          </li>
+          <li class="pagination-item">
+            <a href="">4</a>
+          </li>
+          <li class="pagination-item pagination-item-dots">
+            <a href="">...</a>
+          </li>
+          <li class="pagination-item">
+            <a href="">10</a>
+          </li>
+        </ul>
       </section>
 
       <section class="subscription">
