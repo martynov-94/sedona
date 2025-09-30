@@ -14,11 +14,24 @@
   font-display: swap;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
+  margin: 0;
+
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
+
   background-color: #ffffff;
 }
 
@@ -75,7 +88,7 @@ img {
 }
 
 .clickable-block-inverted {
-  background-color: #82B3D3;
+  background-color: #82b3d3;
 }
 
 .hero-image {
@@ -85,7 +98,7 @@ img {
   color: white;
   background:
     url("../images/hero-bottom-border.svg") no-repeat center 100%,
-    url("../images/hero-bg.jpg") no-repeat center ;
+    url("../images/hero-bg.jpg") no-repeat center;
   background-size: 100%, cover;
   background-color: black;
 }
@@ -128,7 +141,7 @@ img {
 }
 
 .advantages-item-illustrated {
-  background-color: #82B3D3;
+  background-color: #82b3d3;
 }
 
 .features-item:nth-of-type(odd) {
@@ -138,4 +151,88 @@ img {
 .subscription {
   background: blue url("../images/subscribe-bg.jpg") no-repeat center;
   background-size: cover;
+}
+
+.contact-phone {
+  font-size: 40px;
+  line-height: 40px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.developer-link {
+  display: block;
+  width: 115px;
+  height: 33px;
+
+  background: url("../images/icons/html-academy-logo.svg") no-repeat center;
+  background-size: contain;
+}
+
+
+/* Каталог */
+
+.settings {
+  color: #ffffff;
+
+  background: lightblue url("../images/filter-bg.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.settings-title {
+  font-size: 60px;
+  line-height: 78px;
+  color: #ffffff;
+}
+
+.breadcrumbs-link {
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.settings-form-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.settings-services-label {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.clickable-block-transparent {
+  background-color: transparent;
+}
+
+.settings-form-input {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.view-settings-select {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.hotel-card-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.hotel-card-name {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.hotel-card-type,
+.hotel-card-price {
+  font-size: 18px;
+  line-height: 21px;
 }

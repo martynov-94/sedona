@@ -94,25 +94,21 @@
           </fieldset>
           <fieldset class="settings-group">
             <legend class="settings-form-title">Стоимость, ₽:</legend>
-            <input type="number" name="price-from" placeholder="от" min="0" step="100" value="0">
-            <input type="number" name="price-to" placeholder="до" min="0" step="100" value="9000">
+            <input class="settings-form-input" type="number" name="price-from" placeholder="от" min="0" step="100" value="0">
+            <input class="settings-form-input" type="number" name="price-to" placeholder="до" min="0" step="100" value="9000">
             <input type="range" min="0" max="10000" value="8000" step="100">
           </fieldset>
           <fieldset class="settings-group">
-            <input class="clickable-block button-submit" type="submit" value="Применить">
-            <input class="clickable-block button-reset" type="reset" value="Сбросить">
+            <input class="clickable-block clickable-block-inverted button-submit" type="submit" value="Применить">
+            <input class="clickable-block clickable-block-transparent button-reset" type="reset" value="Сбросить">
           </fieldset>
         </form>
       </section>
 
       <section class="hotels">
-        <h2 class="visually-hidden">Список гостиниц</h2>
-        <div class="hotels-found">
-          <span class="hotels-found-title">Найдено гостиниц:</span>
-          <span class="hotels-found-counter">38</span>
-        </div>
+        <h2 class="hotels-title section-title">Найдено гостиниц: <span class="hotels-counter">38</span></h2>
         <div class="view-settings">
-          <select name="sorting-type">
+          <select class="view-settings-select" name="sorting-type">
             <option value="from-cheap">Сначала дешёвые</option>
             <option value="from-expensive">Сначала дорогие</option>
           </select>
@@ -141,7 +137,7 @@
               <h3 class="hotel-card-name">Amara Resort &amp; Spa</h3>
             </a>
             <span class="hotel-card-type">Гостиница</span>
-            <b class="hotel-card-price">От 4000 ₽</b>
+            <span class="hotel-card-price">От 4000 ₽</span>
             <a class="hotel-card-more-link clickable-block" href="#">Подробнее</a>
             <button class="hotel-card-fav-button clickable-block" type="button">В избранное</button>
             <p class="hotel-card-stars four-stars">
@@ -155,7 +151,7 @@
               <h3 class="hotel-card-name">Гостиница 'Villas at Poco Diablo'</h3>
             </a>
             <span class="hotel-card-type">Гостиница</span>
-            <b class="hotel-card-price">От 5000 ₽</b>
+            <span class="hotel-card-price">От 5000 ₽</span>
             <a class="hotel-card-more-link clickable-block" href="#">Подробнее</a>
             <button class="hotel-card-fav-button clickable-block" type="button">В избранное</button>
             <p class="hotel-card-stars four-stars">
@@ -169,7 +165,7 @@
               <h3 class="hotel-card-name">Desert Quail Inn</h3>
             </a>
             <span class="hotel-card-type">Гостиница</span>
-            <b class="hotel-card-price">От 2500 ₽</b>
+            <span class="hotel-card-price">От 2500 ₽</span>
             <a class="hotel-card-more-link clickable-block" href="#">Подробнее</a>
             <button class="hotel-card-fav-button clickable-block" type="button">В избранное</button>
             <p class="hotel-card-stars three-stars">
@@ -183,7 +179,7 @@
               <h3 class="hotel-card-name">GreenTree Inn</h3>
             </a>
             <span class="hotel-card-type">Гостиница</span>
-            <b class="hotel-card-price">От 1500 ₽</b>
+            <span class="hotel-card-price">От 1500 ₽</span>
             <a class="hotel-card-more-link clickable-block" href="#">Подробнее</a>
             <button class="hotel-card-fav-button clickable-block" type="button">В избранное</button>
             <p class="hotel-card-stars two-stars">
