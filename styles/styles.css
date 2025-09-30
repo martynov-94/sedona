@@ -22,10 +22,27 @@ body {
   background-color: #ffffff;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 img {
   max-width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+.page-header {
+  display: flex;
 }
 
 .navigation a {
@@ -44,6 +61,7 @@ img {
   width: auto;
   padding: 8px 34px;
 
+  font-family: inherit;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
@@ -53,6 +71,11 @@ img {
 
   background-color: #756157;
   border-radius: 4px;
+  border: none;
+}
+
+.clickable-block-inverted {
+  background-color: #82B3D3;
 }
 
 .hero-image {
@@ -61,14 +84,10 @@ img {
 
   color: white;
   background:
-    url("../images/hero-bottom-border.svg") no-repeat center,
-    url("../images/hero-bg.jpg") no-repeat center;
-  background-size: cover;
+    url("../images/hero-bottom-border.svg") no-repeat center 100%,
+    url("../images/hero-bg.jpg") no-repeat center ;
+  background-size: 100%, cover;
   background-color: black;
-}
-
-.hero-text {
-
 }
 
 .section-title {
@@ -76,11 +95,7 @@ img {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-}
-
-.section-title_small {
-  font-size: 24px;
-  line-height: 28px;
+  color: #000000;
 }
 
 .section-description {
@@ -88,7 +103,39 @@ img {
   line-height: 26px;
 }
 
-.section-description_small {
+.subsection-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.subsection-description {
   font-size: 18px;
   line-height: 21px;
+}
+
+.section-description-inverted,
+.subsection-description-inverted,
+.section-title-inverted,
+.subsection-title-inverted {
+  color: #ffffff;
+}
+
+.advantages-item:nth-of-type(3) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item-illustrated {
+  background-color: #82B3D3;
+}
+
+.features-item:nth-of-type(odd) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.subscription {
+  background: blue url("../images/subscribe-bg.jpg") no-repeat center;
+  background-size: cover;
 }
