@@ -91,6 +91,14 @@ img {
   background-color: #82b3d3;
 }
 
+.clickable-block-transparent {
+  background-color: transparent;
+}
+
+.clickable-block-success {
+  background-color: #7db54f;
+}
+
 .hero-image {
   width: 100%;
   height: 485px;
@@ -153,6 +161,16 @@ img {
   background-size: cover;
 }
 
+.subscription-transparent {
+  background: none;
+}
+
+.subscription-email-input {
+  font-size: 18px;
+  line-height: 24px;
+  font-family: inherit;
+}
+
 .contact-phone {
   font-size: 40px;
   line-height: 40px;
@@ -203,10 +221,6 @@ img {
   line-height: 23px;
 }
 
-.clickable-block-transparent {
-  background-color: transparent;
-}
-
 .settings-form-input {
   font-family: inherit;
   font-size: 18px;
@@ -235,4 +249,40 @@ img {
 .hotel-card-price {
   font-size: 18px;
   line-height: 21px;
+}
+
+.pagination-item {
+  width: 60px;
+  height: 60px;
+
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #ffffff;
+
+  background-color: #82b3d3;
+  border-radius: 4px;
+}
+
+.pagination-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.pagination-item-current {
+  background-color: #f2f2f2;
+}
+
+.pagination-item-dots {
+  background-color: transparent;
+}
+
+.pagination-item-current .pagination-link,
+.pagination-item-dots .pagination-link {
+  color: #000000;
 }
