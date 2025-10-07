@@ -16,6 +16,9 @@
 
 html {
   box-sizing: border-box;
+  height: 100%;
+
+  background-color: #f2f2f2;
 }
 
 *,
@@ -25,7 +28,12 @@ html {
 }
 
 body {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  min-height: 100%;
+  margin: 0 auto;
 
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -33,6 +41,7 @@ body {
   color: #333333;
 
   background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .visually-hidden {
@@ -54,19 +63,55 @@ img {
   object-fit: contain;
 }
 
-.page-header {
-  display: flex;
+.page-container {
+  max-width: 1200px;
 }
 
-.navigation a {
-  text-decoration: none;
+.page-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 70px;
+
+
+  outline: 1px solid black;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+}
+
+.navigation {
+  margin-left: 168px;
+  margin-right: auto;
+}
+
+.navigation-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
 }
 
 .navigation-link {
+  display: block;
+  padding: 20px 16px;
+
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
   color: #000000;
+  text-decoration: none;
+}
+
+.user-menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
 }
 
 .clickable-block {
@@ -97,6 +142,10 @@ img {
 
 .clickable-block-success {
   background-color: #7db54f;
+}
+
+.main-part {
+  flex-grow: 1;
 }
 
 .hero-image {
@@ -185,6 +234,10 @@ img {
 
   background: url("../images/icons/html-academy-logo.svg") no-repeat center;
   background-size: contain;
+}
+
+.page-footer {
+  /* margin-top: auto; */
 }
 
 
