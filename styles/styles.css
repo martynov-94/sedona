@@ -14,6 +14,9 @@
   font-display: swap;
 }
 
+
+/* fixes */
+
 html {
   box-sizing: border-box;
   height: 100%;
@@ -25,23 +28,6 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1200px;
-  min-height: 100%;
-  margin: 0 auto;
-
-  font-family: "PT Sans", sans-serif;
-  font-size: 18px;
-  line-height: 21px;
-  color: #333333;
-
-  background-color: #ffffff;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .visually-hidden {
@@ -63,55 +49,24 @@ img {
   object-fit: contain;
 }
 
-.page-container {
-  max-width: 1200px;
-}
 
-.page-header {
+/* Общие стили */
+
+body {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  width: 100%;
-  padding: 0 70px;
+  max-width: 1200px;
+  min-height: 100%;
+  margin: 0 auto;
 
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
 
-  outline: 1px solid black;
-}
-
-.logo {
-  position: absolute;
-  top: 0;
-}
-
-.navigation {
-  margin-left: 168px;
-  margin-right: auto;
-}
-
-.navigation-list {
-  display: flex;
-  margin: 0;
-  padding: 0;
-
-  list-style-type: none;
-}
-
-.navigation-link {
-  display: block;
-  padding: 20px 16px;
-
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 700;
-  color: #000000;
-  text-decoration: none;
-}
-
-.user-menu {
-  display: flex;
-  margin: 0;
-  padding: 0;
-
-  list-style-type: none;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .clickable-block {
@@ -142,22 +97,6 @@ img {
 
 .clickable-block-success {
   background-color: #7db54f;
-}
-
-.main-part {
-  flex-grow: 1;
-}
-
-.hero-image {
-  width: 100%;
-  height: 485px;
-
-  color: white;
-  background:
-    url("../images/hero-bottom-border.svg") no-repeat center 100%,
-    url("../images/hero-bg.jpg") no-repeat center;
-  background-size: 100%, cover;
-  background-color: black;
 }
 
 .section-title {
@@ -193,31 +132,65 @@ img {
   color: #ffffff;
 }
 
-.advantages-item:nth-of-type(3) {
-  background-color: rgba(131, 179, 211, 0.2);
+
+/* Хэдер */
+
+.page-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 70px;
 }
 
-.advantages-item-illustrated {
-  background-color: #82b3d3;
+.logo {
+  position: absolute;
+  top: 0;
 }
 
-.features-item:nth-of-type(odd) {
-  background-color: rgba(131, 179, 211, 0.2);
+.navigation {
+  margin-left: 168px;
+  margin-right: auto;
 }
 
-.subscription {
-  background: blue url("../images/subscribe-bg.jpg") no-repeat center;
-  background-size: cover;
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
 }
 
-.subscription-transparent {
-  background: none;
-}
+.navigation-link {
+  display: block;
+  padding: 20px 16px;
 
-.subscription-email-input {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 24px;
-  font-family: inherit;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
+}
+
+.user-menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+/* Основная часть */
+
+.main-part {
+  flex-grow: 1;
+}
+
+/* Футер */
+
+.page-footer {
+  /* margin-top: auto; */
 }
 
 .contact-phone {
@@ -236,12 +209,58 @@ img {
   background-size: contain;
 }
 
-.page-footer {
-  /* margin-top: auto; */
+
+/* Главная страница */
+/* Hero */
+
+.hero-image {
+  width: 100%;
+  height: 485px;
+
+  color: white;
+  background:
+    url("../images/hero-bottom-border.svg") no-repeat center 100%,
+    url("../images/hero-bg.jpg") no-repeat center;
+  background-size: 100%, cover;
+  background-color: black;
 }
 
 
-/* Каталог */
+/* Преимущества */
+
+.advantages-item:nth-of-type(3) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item-illustrated {
+  background-color: #82b3d3;
+}
+
+.features-item:nth-of-type(odd) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+
+/* Подписка */
+
+.subscription {
+  background: blue url("../images/subscribe-bg.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.subscription-transparent {
+  background: none;
+}
+
+.subscription-email-input {
+  font-size: 18px;
+  line-height: 24px;
+  font-family: inherit;
+}
+
+
+/* Страница каталога */
+/* Настройки поиска */
 
 .settings {
   color: #ffffff;
