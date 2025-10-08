@@ -46,16 +46,13 @@ html {
 img {
   max-width: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 
-/* Общие стили */
+/* Общие стили для обеих страниц */
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   max-width: 1200px;
   min-height: 100%;
   margin: 0 auto;
@@ -103,6 +100,7 @@ body {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
+  text-align: center;
   text-transform: uppercase;
   color: #000000;
 }
@@ -110,12 +108,14 @@ body {
 .section-description {
   font-size: 22px;
   line-height: 26px;
+  text-align: center;
 }
 
 .subsection-title {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
+  text-align: center;
   text-transform: uppercase;
   color: #000000;
 }
@@ -123,6 +123,7 @@ body {
 .subsection-description {
   font-size: 18px;
   line-height: 21px;
+  text-align: center;
 }
 
 .section-description-inverted,
@@ -213,9 +214,10 @@ body {
 /* Главная страница */
 /* Hero */
 
-.hero-image {
+.hero {
   width: 100%;
   height: 485px;
+  padding-top: 51px;
 
   color: white;
   background:
@@ -225,21 +227,83 @@ body {
   background-color: black;
 }
 
+.hero-text {
+  display: block;
+  margin: 0 auto;
+}
+
+.about-sedona {
+  padding: 69px 270px;
+}
+
 
 /* Преимущества */
+
+.advantages-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 385px);
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.advantages-item-wrapper {
+  display: flex;
+  height: 385px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 112.5px 85px;
+}
 
 .advantages-item:nth-of-type(3) {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
 .advantages-item-illustrated {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column: 1 / -1;
+
   background-color: #82b3d3;
+}
+
+.advantages-item-illustrated:last-of-type {
+  grid-template-columns: 2fr 1fr;
 }
 
 .features-item:nth-of-type(odd) {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
+.advantages-item-title {
+  position: relative;
+
+  margin-bottom: 62px;
+}
+
+.advantages-item-title::after {
+  position: absolute;
+  display: block;
+  content: "";
+
+  bottom: -30px;
+  left: calc(50% - 30px);
+
+  width: 60px;
+  height: 2px;
+
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.advantages-item-illustrated .advantages-item-title::after {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.advantages-item-description {
+  margin-top: 0;
+}
 
 /* Подписка */
 
