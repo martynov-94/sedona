@@ -17,6 +17,10 @@
 
 /* fixes */
 
+:root {
+  --nav-link-hor-padding: 16px;
+}
+
 html {
   box-sizing: border-box;
   height: 100%;
@@ -49,7 +53,6 @@ img {
   object-fit: cover;
 }
 
-
 /* Общие стили для обеих страниц */
 
 body {
@@ -69,11 +72,11 @@ body {
 .clickable-block {
   display: inline-block;
   width: auto;
-  padding: 8px 34px;
+  padding: 8px 50px;
 
   font-family: inherit;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 20px;
+  line-height: 36px;
   font-weight: 700;
   color: #ffffff;
   text-transform: uppercase;
@@ -97,6 +100,8 @@ body {
 }
 
 .section-title {
+  margin: 0;
+
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -106,6 +111,8 @@ body {
 }
 
 .section-description {
+  margin: 0;
+
   font-size: 22px;
   line-height: 26px;
   text-align: center;
@@ -144,12 +151,17 @@ body {
 }
 
 .logo {
-  position: absolute;
-  top: 0;
+  align-self: flex-start;
+  margin-right: 30px;
+}
+
+.logo-image {
+  display: block;
+  margin-bottom: -6px;
 }
 
 .navigation {
-  margin-left: 168px;
+  max-width: 450px;
   margin-right: auto;
 }
 
@@ -164,13 +176,29 @@ body {
 
 .navigation-link {
   display: block;
-  padding: 20px 16px;
+  padding: 20px var(--nav-link-hor-padding);
 
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
   color: #000000;
   text-decoration: none;
+}
+
+.navigation-link-current {
+  position: relative;
+}
+
+.navigation-link-current::after {
+  position: absolute;
+  content: "";
+  left: var(--nav-link-hor-padding);
+  bottom: -1px;
+
+  width: calc(100% - 2 * var(--nav-link-hor-padding));
+  height: 2px;
+
+  background-color: #756257;
 }
 
 .user-menu {
@@ -180,6 +208,14 @@ body {
   padding: 0;
 
   list-style-type: none;
+}
+
+.user-menu-link {
+  padding-left: 34px;
+  padding-right: 34px;
+
+  font-size: 16px;
+  line-height: 20px;
 }
 
 /* Основная часть */
@@ -236,6 +272,10 @@ body {
   padding: 69px 270px;
 }
 
+.about-sedona-title {
+  margin-bottom: 25px;
+}
+
 
 /* Преимущества */
 
@@ -249,11 +289,12 @@ body {
   list-style-type: none;
 }
 
-.advantages-item-wrapper {
+.list-item-wrapper {
   display: flex;
-  height: 385px;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  height: 385px;
   padding: 112.5px 85px;
 }
 
@@ -273,8 +314,8 @@ body {
   grid-template-columns: 2fr 1fr;
 }
 
-.features-item:nth-of-type(odd) {
-  background-color: rgba(131, 179, 211, 0.2);
+.advantages-item-illustrated:last-of-type .advantages-item-pic {
+  order: -1;
 }
 
 .advantages-item-title {
@@ -302,12 +343,101 @@ body {
 }
 
 .advantages-item-description {
-  margin-top: 0;
+  /* margin-top: 0; */
+}
+
+/* Приглашение */
+
+.invitation {
+  padding: 64px 270px;
+}
+
+.invitation-title {
+  margin-bottom: 20px;
+}
+
+.invitation-description {
+}
+
+/* Сервисы */
+
+.features-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.features-item:nth-of-type(odd) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.features-item-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.features-item-title::before {
+  content: "";
+  width: 76px;
+  height: 76px;
+  margin-bottom: 30px;
+
+  background: url("../images/icons/services-house.svg") no-repeat center;
+}
+
+.features-item:nth-of-type(2) .features-item-title::before {
+  background-image: url("../images/icons/services-food.svg");
+}
+
+.features-item:nth-of-type(3) .features-item-title::before {
+  background-image: url("../images/icons/services-gifts.svg");
+}
+
+.features-item-description {
+}
+
+
+/* Подписка */
+
+
+
+/* CTA */
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 96px 304px;
+}
+
+.cta-title {
+  margin-bottom: 20px;
+}
+
+.cta-description {
+  margin-bottom: 54px;
+}
+
+.cta-btn {
+  padding-left: 50px;
+  padding-right: 50px;
+
+  font-size: 20px;
+  line-height: 36px;
 }
 
 /* Подписка */
 
 .subscription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 104px 258px;
+
   background: blue url("../images/subscribe-bg.jpg") no-repeat center;
   background-size: cover;
 }
@@ -316,12 +446,39 @@ body {
   background: none;
 }
 
-.subscription-email-input {
-  font-size: 18px;
-  line-height: 24px;
-  font-family: inherit;
+.subscription-title {
+  margin-bottom: 20px;
 }
 
+.subscription-description {
+  margin-bottom: 54px;
+}
+
+.subscription-form {
+  display: flex;
+  width: 100%;
+}
+
+.subscription-email-input {
+  padding: 14px 20px;
+
+  flex-grow: 1;
+  font-size: 18px;
+  font-family: inherit;
+  line-height: 24px;
+
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.subscription-email-input::placeholder {
+  color: #000000;
+  opacity: 0.6;
+}
+
+.subscription-submit-btn {
+  border-radius: 0 4px 4px 0;
+}
 
 /* Страница каталога */
 /* Настройки поиска */
