@@ -503,6 +503,8 @@ body {
 /* Настройки поиска */
 
 .settings {
+  padding: 35px 70px 70px;
+
   color: #ffffff;
 
   background: lightblue url("../images/filter-bg.jpg") no-repeat center;
@@ -510,9 +512,21 @@ body {
 }
 
 .settings-title {
+  margin-top: 0;
+  margin-bottom: 8px;
+
   font-size: 60px;
   line-height: 78px;
   color: #ffffff;
+}
+
+.breadcrumbs {
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  list-style-type: none;
 }
 
 .breadcrumbs-link {
@@ -522,7 +536,19 @@ body {
   text-decoration: none;
 }
 
-.settings-form-title {
+.settings-form {
+  display: flex;
+}
+
+.settings-group {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.settings-group-title {
+  padding: 0;
+
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
