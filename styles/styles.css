@@ -18,6 +18,7 @@
 /* fixes */
 
 :root {
+  --body-hor-padding: 70px;
   --nav-link-hor-padding: 16px;
 }
 
@@ -147,7 +148,7 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 0 70px;
+  padding: 0 var(--body-hor-padding);
 }
 
 .logo {
@@ -227,7 +228,25 @@ body {
 /* Футер */
 
 .page-footer {
-  /* margin-top: auto; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px var(--body-hor-padding) 30px;
+}
+
+.social-links {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47px;
+  height: 40px;
 }
 
 .contact-phone {
