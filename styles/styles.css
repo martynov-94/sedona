@@ -88,6 +88,10 @@ body {
   border: none;
 }
 
+.clickable-block:hover {
+  cursor: pointer;
+}
+
 .clickable-block-inverted {
   background-color: #82b3d3;
 }
@@ -585,6 +589,9 @@ body {
 }
 
 .settings-price {
+  display: flex;
+  flex-direction: column;
+  width: 288px;
   margin-right: 70px;
 }
 
@@ -599,6 +606,26 @@ body {
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
+
+  border: none;
+}
+
+.settings-price-input:first-of-type {
+  margin-right: 2px;
+
+  border-radius: 4px 0 0 4px;
+}
+
+.settings-price-input:last-of-type {
+  margin-right: 2px;
+
+  border-radius: 0 4px 4px 0;
+}
+
+.settings-price-slider {
+  width: 288px;
+  margin: 0;
+  margin-top: auto;
 }
 
 .settings-buttons {
@@ -619,6 +646,19 @@ body {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
+}
+
+.hotels {
+  padding: 50px 70px 60px;
+}
+
+.hotels-header {
+  display: flex;
+  align-items: center;
+}
+
+.hotels-title {
+  margin-right: auto;
 }
 
 .view-settings-select {

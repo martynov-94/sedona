@@ -98,7 +98,7 @@
               <input class="settings-price-input" type="number" name="price-from" placeholder="от" min="0" step="100" value="0">
               <input class="settings-price-input" type="number" name="price-to" placeholder="до" min="0" step="100" value="9000">
             </div>
-            <input type="range" min="0" max="10000" value="8000" step="100">
+            <input class="settings-price-slider" type="range" min="0" max="10000" value="8000" step="100">
           </fieldset>
           <fieldset class="settings-group settings-buttons">
             <input class="clickable-block clickable-block-inverted settings-button" type="submit" value="Применить">
@@ -108,8 +108,8 @@
       </section>
 
       <section class="hotels">
-        <h2 class="hotels-title section-title">Найдено гостиниц: <span class="hotels-counter">38</span></h2>
-        <div class="view-settings">
+        <header class="hotels-header">
+          <h2 class="hotels-title section-title">Найдено гостиниц: <span class="hotels-counter">38</span></h2>
           <select class="view-settings-select" name="sorting-type">
             <option value="from-cheap">Сначала дешёвые</option>
             <option value="from-expensive">Сначала дорогие</option>
@@ -131,7 +131,7 @@
               </a>
             </li>
           </ul>
-        </div>
+        </header>
         <ul class="hotels-list">
           <li class="hotels-item hotel-card">
             <a class="hotel-card-link" href="#">
