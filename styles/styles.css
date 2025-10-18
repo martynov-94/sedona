@@ -151,7 +151,7 @@ body {
   padding: 0 var(--body-hor-padding);
 }
 
-.logo {
+.logo-link {
   align-self: flex-start;
   margin-right: 30px;
 }
@@ -375,8 +375,7 @@ body {
   margin-bottom: 20px;
 }
 
-.invitation-description {
-}
+.invitation-description {}
 
 /* Сервисы */
 
@@ -416,8 +415,7 @@ body {
   background-image: url("../images/icons/services-gifts.svg");
 }
 
-.features-item-description {
-}
+.features-item-description {}
 
 
 /* Подписка */
@@ -547,6 +545,7 @@ body {
 }
 
 .settings-group-title {
+  margin-bottom: 32px;
   padding: 0;
 
   font-size: 20px;
@@ -554,9 +553,65 @@ body {
   font-weight: 700;
 }
 
+.settings-services {
+  margin-right: 70px;
+}
+
 .settings-services-label {
+  display: block;
+
   font-size: 18px;
   line-height: 23px;
+}
+
+.settings-house-type {
+  margin-right: 140px;
+}
+
+.settings-services-label,
+.settings-house-type-label {
+  display: block;
+  padding-left: 36px;
+}
+
+.settings-services-label:not(:last-of-type),
+.settings-house-type-label:not(:last-of-type) {
+  margin-bottom: 16px;
+}
+
+.settings-services-checkbox,
+.settings-house-type-radio {
+  display: none;
+}
+
+.settings-price {
+  margin-right: 70px;
+}
+
+.settings-price-inputs {
+  display: flex;
+}
+
+.settings-price-input {
+  width: 143px;
+  padding: 12px 20px;
+
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.settings-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 32px;
+}
+
+.settings-button {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 8px 50px;
 }
 
 .settings-form-input {

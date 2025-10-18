@@ -62,7 +62,7 @@
         </ul>
 
         <form class="settings-form" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset class="settings-group">
+          <fieldset class="settings-group settings-services">
             <legend class="settings-group-title">Инфраструктура:</legend>
             <label class="settings-services-label">
               <input class="settings-services-checkbox" type="checkbox" name="pool" checked>
@@ -77,7 +77,7 @@
               Wi-Fi
             </label>
           </fieldset>
-          <fieldset class="settings-group">
+          <fieldset class="settings-group settings-house-type">
             <legend class="settings-group-title">Тип жилья:</legend>
             <label class="settings-house-type-label">
               <input class="settings-house-type-radio" type="radio" name="house-type" value="hotel" checked>
@@ -92,15 +92,17 @@
               Апартаменты
             </label>
           </fieldset>
-          <fieldset class="settings-group">
+          <fieldset class="settings-group settings-price">
             <legend class="settings-group-title">Стоимость, ₽:</legend>
-            <input class="settings-form-input" type="number" name="price-from" placeholder="от" min="0" step="100" value="0">
-            <input class="settings-form-input" type="number" name="price-to" placeholder="до" min="0" step="100" value="9000">
+            <div class="settings-price-inputs">
+              <input class="settings-price-input" type="number" name="price-from" placeholder="от" min="0" step="100" value="0">
+              <input class="settings-price-input" type="number" name="price-to" placeholder="до" min="0" step="100" value="9000">
+            </div>
             <input type="range" min="0" max="10000" value="8000" step="100">
           </fieldset>
-          <fieldset class="settings-group">
-            <input class="clickable-block clickable-block-inverted button-submit" type="submit" value="Применить">
-            <input class="clickable-block clickable-block-transparent button-reset" type="reset" value="Сбросить">
+          <fieldset class="settings-group settings-buttons">
+            <input class="clickable-block clickable-block-inverted settings-button" type="submit" value="Применить">
+            <input class="clickable-block clickable-block-transparent settings-button" type="reset" value="Сбросить">
           </fieldset>
         </form>
       </section>
