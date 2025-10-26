@@ -124,6 +124,8 @@ body {
 }
 
 .subsection-title {
+  margin-top: 0;
+
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
@@ -133,6 +135,8 @@ body {
 }
 
 .subsection-description {
+  margin: 0;
+
   font-size: 18px;
   line-height: 21px;
   text-align: center;
@@ -209,13 +213,55 @@ body {
 .user-menu {
   display: flex;
   flex-wrap: wrap;
+  align-self: stretch;
   margin: 0;
   padding: 0;
 
   list-style-type: none;
 }
 
+.user-menu-item {
+  display: flex;
+  min-width: 44px;
+}
+
+.user-menu-item:last-of-type {
+  margin-left: 20px;
+}
+
 .user-menu-link {
+  width: 100%;
+}
+
+.user-menu-search {
+  background: url("../images/icons/search-icon.svg") no-repeat center;
+}
+
+.user-menu-favourites {
+  position: relative;
+
+  background: url("../images/icons/favourite-icon.svg") no-repeat center;
+}
+
+.hotels-number {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+
+  width: 20px;
+  height: 20px;
+
+  font-size: 10px;
+  color: #ffffff;
+  text-align: center;
+
+  background-color: #7db54f;
+  border-radius: 50%;
+}
+
+.user-menu-catalog-link {
+  display: block;
+  align-self: center;
   padding-left: 34px;
   padding-right: 34px;
 
@@ -235,7 +281,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px var(--body-hor-padding) 30px;
+  padding: 45px var(--body-hor-padding) 35px;
 }
 
 .social-links {
@@ -292,7 +338,7 @@ body {
 }
 
 .about-sedona {
-  padding: 69px 270px;
+  padding: 69px 270px 90px;
 }
 
 .about-sedona-title {
@@ -391,8 +437,12 @@ body {
   list-style-type: none;
 }
 
+.features-item {
+  flex-basis: 400px;
+}
+
 .features-item:nth-of-type(odd) {
-  background-color: rgba(131, 179, 211, 0.2);
+  background-color: rgba(131, 179, 211, 0.12);
 }
 
 .features-item-title {
@@ -457,7 +507,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 104px 258px;
+  padding: 96px 258px 104px;
 
   background: blue url("../images/subscribe-bg.jpg") no-repeat center;
   background-size: cover;
@@ -583,21 +633,19 @@ body {
   margin-right: 70px;
 }
 
-.settings-services-label {
-  display: block;
-
-  font-size: 18px;
-  line-height: 23px;
-}
-
 .settings-house-type {
   margin-right: 140px;
 }
 
 .settings-services-label,
 .settings-house-type-label {
+  position: relative;
+
   display: block;
   padding-left: 36px;
+
+  font-size: 18px;
+  line-height: 23px;
 }
 
 .settings-services-label:not(:last-of-type),
@@ -608,6 +656,24 @@ body {
 .settings-services-checkbox,
 .settings-house-type-radio {
   display: none;
+}
+
+.settings-services-label::before,
+.settings-house-type-label::before {
+  position: absolute;
+  content: "";
+  top: 1.5px;
+  left: 0;
+
+  width: 20px;
+  height: 20px;
+
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.settings-house-type-label::before {
+  border-radius: 50%;
 }
 
 .settings-price {

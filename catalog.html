@@ -16,30 +16,30 @@
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="index.html"
-              >Главная</a>
-            </li>
+            <a class="navigation-link" href="index.html">Главная</a>
+          </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-current" href="#">Гостиницы</a>
+            <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
       </nav>
       <ul class="user-menu">
         <li class="user-menu-item">
-          <a class="user-menu-link" href="#">
+          <a class="user-menu-link user-menu-search" href="#">
             <span class="visually-hidden">Поиск</span>
           </a>
         </li>
         <li class="user-menu-item">
-          <a class="user-menu-link" href="#">
-            <span class="visually-hidden">Отелей в избранном: 12</span>
+          <a class="user-menu-link user-menu-favourites" href="#">
+            <span class="visually-hidden">Отелей в избранном:</span>
+            <span class="hotels-number">12</span>
           </a>
         </li>
         <li class="user-menu-item">
-          <a class="user-menu-link clickable-block" href="#">Хочу сюда!</a>
+          <a class="user-menu-link user-menu-catalog-link clickable-block" href="#">Хочу сюда!</a>
         </li>
       </ul>
     </header>
@@ -64,10 +64,8 @@
         <form class="settings-form" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="settings-group settings-services">
             <legend class="settings-group-title">Инфраструктура:</legend>
-            <label class="settings-services-label">
-              <input class="settings-services-checkbox" type="checkbox" name="pool" checked>
-              Бассейн
-            </label>
+            <input class="settings-services-checkbox" id="pool-checkbox" type="checkbox" name="pool" checked>
+            <label class="settings-services-label" for="pool-checkbox">Бассейн</label>
             <label class="settings-services-label">
               <input class="settings-services-checkbox" type="checkbox" name="parking-lot" checked>
               Парковка
@@ -95,12 +93,15 @@
           <fieldset class="settings-group settings-price">
             <legend class="settings-group-title">Стоимость, ₽:</legend>
             <div class="settings-price-inputs">
-              <input class="settings-price-input" type="number" name="price-from" placeholder="от" min="0" step="100" value="0">
-              <input class="settings-price-input" type="number" name="price-to" placeholder="до" min="0" step="100" value="9000">
+              <input class="settings-price-input" type="number" name="price-from" placeholder="от" min="0" step="100"
+                value="0">
+              <input class="settings-price-input" type="number" name="price-to" placeholder="до" min="0" step="100"
+                value="9000">
             </div>
             <input class="settings-price-slider" type="range" min="0" max="10000" value="8000" step="100">
           </fieldset>
           <fieldset class="settings-group settings-buttons">
+            <legend class="visually-hidden">Применить или сбросить настройки</legend>
             <input class="clickable-block clickable-block-inverted settings-button" type="submit" value="Применить">
             <input class="clickable-block clickable-block-transparent settings-button" type="reset" value="Сбросить">
           </fieldset>
@@ -135,13 +136,15 @@
         <ul class="hotels-list">
           <li class="hotels-item hotel-card">
             <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="images/hotel-1.jpg" width="300" height="212" alt="Гостиница 'Amara Resort &amp; Spa'">
+              <img class="hotel-card-image" src="images/hotel-1.jpg" width="300" height="212"
+                alt="Гостиница 'Amara Resort &amp; Spa'">
               <h3 class="hotel-card-name">Amara Resort &amp; Spa</h3>
             </a>
             <span class="hotel-card-type">Гостиница</span>
             <span class="hotel-card-price">От 4000 ₽</span>
             <a class="hotel-card-clickable-block clickable-block" href="#">Подробнее</a>
-            <button class="hotel-card-clickable-block clickable-block clickable-block-inverted" type="button">В избранное</button>
+            <button class="hotel-card-clickable-block clickable-block clickable-block-inverted" type="button">В
+              избранное</button>
             <p class="hotel-card-stars four-stars">
               <span class="visually-hidden">4 звезды</span>
             </p>
@@ -149,13 +152,15 @@
           </li>
           <li class="hotels-item hotel-card">
             <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="images/hotel-2.jpg" width="300" height="212" alt="Гостиница 'Villas at Poco Diablo'">
+              <img class="hotel-card-image" src="images/hotel-2.jpg" width="300" height="212"
+                alt="Гостиница 'Villas at Poco Diablo'">
               <h3 class="hotel-card-name">Villas at Poco Diablo</h3>
             </a>
             <span class="hotel-card-type">Гостиница</span>
             <span class="hotel-card-price">От 5000 ₽</span>
             <a class="hotel-card-clickable-block clickable-block" href="#">Подробнее</a>
-            <button class="hotel-card-clickable-block clickable-block clickable-block-success" type="button">В избранном</button>
+            <button class="hotel-card-clickable-block clickable-block clickable-block-success" type="button">В
+              избранном</button>
             <p class="hotel-card-stars four-stars">
               <span class="visually-hidden">4 звезды</span>
             </p>
@@ -163,13 +168,15 @@
           </li>
           <li class="hotels-item hotel-card">
             <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="images/hotel-3.jpg" width="300" height="212" alt="Гостиница 'Desert Quail Inn">
+              <img class="hotel-card-image" src="images/hotel-3.jpg" width="300" height="212"
+                alt="Гостиница 'Desert Quail Inn">
               <h3 class="hotel-card-name">Desert Quail Inn</h3>
             </a>
             <span class="hotel-card-type">Гостиница</span>
             <span class="hotel-card-price">От 2500 ₽</span>
             <a class="hotel-card-clickable-block clickable-block" href="#">Подробнее</a>
-            <button class="hotel-card-clickable-block clickable-block clickable-block-inverted" type="button">В избранное</button>
+            <button class="hotel-card-clickable-block clickable-block clickable-block-inverted" type="button">В
+              избранное</button>
             <p class="hotel-card-stars three-stars">
               <span class="visually-hidden">4 звезды</span>
             </p>
@@ -177,13 +184,15 @@
           </li>
           <li class="hotels-item hotel-card">
             <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="images/hotel-4.jpg" width="300" height="212" alt="Гостиница 'GreenTree Inn'">
+              <img class="hotel-card-image" src="images/hotel-4.jpg" width="300" height="212"
+                alt="Гостиница 'GreenTree Inn'">
               <h3 class="hotel-card-name">GreenTree Inn</h3>
             </a>
             <span class="hotel-card-type">Гостиница</span>
             <span class="hotel-card-price">От 1500 ₽</span>
             <a class="hotel-card-clickable-block clickable-block" href="#">Подробнее</a>
-            <button class="hotel-card-clickable-block clickable-block clickable-block-inverted" type="button">В избранное</button>
+            <button class="hotel-card-clickable-block clickable-block clickable-block-inverted" type="button">В
+              избранное</button>
             <p class="hotel-card-stars two-stars">
               <span class="visually-hidden">2 звезды</span>
             </p>
@@ -219,8 +228,10 @@
           Только полезная информация и никакого спама, честное&nbsp;бойскаутское!
         </p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="subscription-email-input subscription-email-input-dark" type="email" name="email" placeholder="Ваш e-mail" required>
-          <input class="subscription-submit-btn clickable-block clickable-block-inverted" type="submit" value="Подписаться">
+          <input class="subscription-email-input subscription-email-input-dark" type="email" name="email"
+            placeholder="Ваш e-mail" required>
+          <input class="subscription-submit-btn clickable-block clickable-block-inverted" type="submit"
+            value="Подписаться">
         </form>
       </section>
     </main>
