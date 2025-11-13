@@ -82,6 +82,8 @@ body {
   background-color: #756157;
   border-radius: 4px;
   border: none;
+
+  transition: 0.3s;
 }
 
 .clickable-block:hover {
@@ -222,6 +224,8 @@ body {
 .logo-image {
   display: block;
   margin-bottom: -6px;
+
+  transition: 0.3s;
 }
 
 .logo-image:hover,
@@ -261,6 +265,15 @@ body {
   text-decoration: none;
 }
 
+.site-pages-link:hover,
+.site-pages-link:focus {
+  color: #756157;
+}
+
+.site-pages-link:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .site-pages-link-current {
   position: relative;
 }
@@ -278,9 +291,12 @@ body {
 }
 
 .user-menu {
+  display: flex;
   margin: 0;
   padding: 0;
   max-width: 320px;
+
+  list-style-type: none;
 }
 
 .user-menu-list {
@@ -306,6 +322,27 @@ body {
   width: 100%;
 }
 
+.user-menu-icon:hover,
+.user-menu-icon:focus {
+  opacity: 0.6;
+}
+
+.user-menu-icon:active {
+  opacity: 0.3;
+}
+
+.user-menu-catalog-link {
+  display: block;
+  align-self: center;
+  padding-left: 34px;
+  padding-right: 34px;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  /* transition: 0.3s; */
+}
+
 .user-menu-search {
   background: url("../images/icons/search-icon.svg") no-repeat center;
 }
@@ -318,7 +355,7 @@ body {
 
 .hotels-number {
   position: absolute;
-  top: -3px;
+  top: 9px;
   right: 5px;
 
   width: 20px;
@@ -332,15 +369,6 @@ body {
   border-radius: 50%;
 }
 
-.user-menu-catalog-link {
-  display: block;
-  align-self: center;
-  padding-left: 34px;
-  padding-right: 34px;
-
-  font-size: 16px;
-  line-height: 20px;
-}
 
 /* Основная часть */
 
@@ -372,6 +400,7 @@ body {
   height: 40px;
 }
 
+
 .contact-phone {
   font-size: 40px;
   line-height: 40px;
@@ -379,15 +408,41 @@ body {
   text-decoration: none;
 }
 
+.contact-phone:hover,
+.contact-phone:focus {
+  color: #756157;
+}
+
+.contact-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .developer-link {
   display: block;
   width: 115px;
   height: 33px;
+}
 
-  background: url("../images/icons/html-academy-logo.svg") no-repeat center;
+.developer-link::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+
+  -webkit-mask: url("../images/icons/html-academy-logo.svg") no-repeat center;
+  mask: url("../images/icons/html-academy-logo.svg") no-repeat center;
+  background-color: black;
   background-size: contain;
 }
 
+.developer-link:hover::before,
+.developer-link:focus::before {
+  background-color: #756157;
+}
+
+.developer-link:active::before {
+  background-color: rgba(117, 97, 87, 0.3);
+}
 
 /* Главная страница */
 /* Hero */
