@@ -398,8 +398,35 @@ body {
   align-items: center;
   width: 47px;
   height: 40px;
+
+  -webkit-mask: no-repeat center;
+  mask: no-repeat center;
+  background-color: #83b3d3;
 }
 
+.social-link:hover,
+.social-link:focus {
+  background-color: #68a2ca;
+}
+
+.social-link:active {
+  background-color: rgba(104, 162, 202, 0.3);
+}
+
+.social-vk {
+  -webkit-mask-image: url("../images/icons/vk.svg");
+  mask-image: url("../images/icons/vk.svg");
+}
+
+.social-tg {
+  -webkit-mask-image: url("../images/icons/telegram.svg");
+  mask-image: url("../images/icons/telegram.svg");
+}
+
+.social-yt {
+  -webkit-mask-image: url("../images/icons/youtube.svg");
+  mask-image: url("../images/icons/youtube.svg");
+}
 
 .contact-phone {
   font-size: 40px;
@@ -431,7 +458,7 @@ body {
 
   -webkit-mask: url("../images/icons/html-academy-logo.svg") no-repeat center;
   mask: url("../images/icons/html-academy-logo.svg") no-repeat center;
-  background-color: black;
+  background-color: #000000;
   background-size: contain;
 }
 
@@ -452,12 +479,12 @@ body {
   height: 485px;
   padding-top: 51px;
 
-  color: white;
+  color: #ffffff;
   background:
     url("../images/hero-bottom-border.svg") no-repeat center 100%,
     url("../images/hero-bg.jpg") no-repeat center;
   background-size: 100%, cover;
-  background-color: black;
+  background-color: #2b5b8d;
 }
 
 .hero-text {
@@ -767,10 +794,7 @@ body {
 
 .settings-services-label,
 .settings-house-type-label {
-  position: relative;
-
   display: block;
-  padding-left: 36px;
 
   font-size: 18px;
   line-height: 23px;
@@ -783,10 +807,39 @@ body {
 
 .settings-services-checkbox,
 .settings-house-type-radio {
-  display: none;
+  appearance: none;
+
+  position: relative;
+  top: 3px;
+
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  margin-right: 16px;
+
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.settings-services-label::before,
+.settings-services-checkbox {
+  border-radius: 4px;
+}
+
+.settings-services-checkbox:checked {
+  background-image: url("../images/icons/checkbox-checkmark.svg");
+  background-position: center 6px;
+}
+
+.settings-house-type-radio {
+  border-radius: 50%;
+}
+
+.settings-house-type-radio:checked {
+  background-image: url("../images/icons/radio-circle.svg");
+}
+
+/* .settings-services-label::before,
 .settings-house-type-label::before {
   position: absolute;
   content: "";
@@ -802,7 +855,7 @@ body {
 
 .settings-house-type-label::before {
   border-radius: 50%;
-}
+} */
 
 .settings-price {
   display: flex;
