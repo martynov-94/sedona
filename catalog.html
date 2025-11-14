@@ -18,13 +18,13 @@
         <nav class="navigation">
           <ul class="site-pages-list">
             <li class="site-pages-item">
-              <a class="site-pages-link site-pages-link-current" href="index.html">Главная</a>
+              <a class="site-pages-link" href="index.html">Главная</a>
             </li>
             <li class="site-pages-item">
               <a class="site-pages-link" href="#">О Седоне</a>
             </li>
             <li class="site-pages-item">
-              <a class="site-pages-link" href="catalog.html">Гостиницы</a>
+              <a class="site-pages-link site-pages-link-current" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
           <ul class="user-menu">
@@ -93,10 +93,16 @@
             <fieldset class="settings-group settings-price">
               <legend class="settings-group-title">Стоимость, ₽:</legend>
               <div class="settings-price-inputs">
-                <input class="settings-price-input" type="number" name="price-from" placeholder="от" min="0" step="100"
-                  value="0">
-                <input class="settings-price-input" type="number" name="price-to" placeholder="до" min="0" step="100"
-                  value="9000">
+                <div class="settings-price-wrapper">
+                  <span class="settings-price-direction">от</span>
+                  <input class="settings-price-input" type="number" name="price-from" placeholder="от" min="0"
+                    step="100" value="0">
+                </div>
+                <div class="settings-price-wrapper">
+                  <span class="settings-price-direction">до</span>
+                  <input class="settings-price-input" type="number" name="price-to" placeholder="до" min="0" step="100"
+                    value="9000">
+                </div>
               </div>
               <input class="settings-price-slider" type="range" min="0" max="10000" value="8000" step="100">
             </fieldset>

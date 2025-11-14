@@ -828,7 +828,7 @@ body {
 
 .settings-services-checkbox:checked {
   background-image: url("../images/icons/checkbox-checkmark.svg");
-  background-position: center 6px;
+  background-position: 4px 6px;
 }
 
 .settings-house-type-radio {
@@ -838,24 +838,6 @@ body {
 .settings-house-type-radio:checked {
   background-image: url("../images/icons/radio-circle.svg");
 }
-
-/* .settings-services-label::before,
-.settings-house-type-label::before {
-  position: absolute;
-  content: "";
-  top: 1.5px;
-  left: 0;
-
-  width: 20px;
-  height: 20px;
-
-  background-color: #ffffff;
-  border-radius: 4px;
-}
-
-.settings-house-type-label::before {
-  border-radius: 50%;
-} */
 
 .settings-price {
   display: flex;
@@ -868,27 +850,48 @@ body {
   display: flex;
 }
 
-.settings-price-input {
-  width: 143px;
-  padding: 12px 20px;
+.settings-price-wrapper {
+  position: relative;
+}
 
+.settings-price-input {
+  -webkit-appearance: textfield;
+  appearance: textfield;
+
+  width: 143px;
+  height: 48px;
+  padding-left: 20px;
+  padding-right: 30px;
+
+  font-family: inherit;
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
 
   border: none;
-}
-
-.settings-price-input:first-of-type {
-  margin-right: 2px;
-
   border-radius: 4px 0 0 4px;
 }
 
-.settings-price-input:last-of-type {
-  margin-right: 2px;
+.settings-price-input::-webkit-inner-spin-button,
+.settings-price-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.settings-price-wrapper:last-of-type .settings-price-input {
+  margin-left: 2px;
 
   border-radius: 0 4px 4px 0;
+}
+
+.settings-price-direction {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+
+  font-family: inherit;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .settings-price-slider {
