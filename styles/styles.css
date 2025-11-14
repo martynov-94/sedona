@@ -135,9 +135,9 @@ body {
 }
 
 .clickable-block-transparent:focus {
-  border: 3px solid #83B3D3;
+  outline: 3px solid #83B3D3;
   border-radius: 4px;
-  outline: none;
+  /* outline: none; */
 }
 
 .clickable-block-transparent:active {
@@ -776,7 +776,7 @@ body {
 }
 
 .settings-group-title {
-  margin-bottom: 32px;
+  margin-bottom: 30px;
   padding: 0;
 
   font-size: 20px;
@@ -789,7 +789,7 @@ body {
 }
 
 .settings-house-type {
-  margin-right: 140px;
+  margin-right: 152px;
 }
 
 .settings-services-label,
@@ -802,7 +802,7 @@ body {
 
 .settings-services-label:not(:last-of-type),
 .settings-house-type-label:not(:last-of-type) {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .settings-services-checkbox,
@@ -894,10 +894,45 @@ body {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.settings-price-slider {
-  width: 288px;
-  margin: 0;
+.range-full-bar {
+  position: relative;
+
+  /* width: 287px; */
+  height: 4px;
+  margin-bottom: 6px;
   margin-top: auto;
+
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-filled-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 226px;
+  height: 4px;
+
+  background-color: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -8px;
+
+  width: 20px;
+  height: 20px;
+
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: none;
+}
+
+.toggle-min {
+  left: 0;
+}
+
+.toggle-max {
+  left: 206px;
 }
 
 .settings-buttons {
@@ -958,8 +993,7 @@ body {
 }
 
 .view-types-item {
-  border: 2px solid #E5E5E5;
-  border-radius: 4px;
+
 }
 
 .view-type {
@@ -968,6 +1002,13 @@ body {
   align-items: center;
   width: 48px;
   height: 48px;
+
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+}
+
+.view-type-chosen {
+  border-color: #000000;
 }
 
 .hotels-list {
@@ -1042,7 +1083,14 @@ body {
 }
 
 .hotel-card-stars {
+  align-self: center;
+  width: 106px;
+  height: 18px;
   margin: 0;
+
+  background-image: url("../images/icons/star.svg");
+  background-repeat: space;
+  background-position: 0 center;
 }
 
 .hotel-card-rating {
@@ -1056,6 +1104,22 @@ body {
 
   background-color: #F2F2F2;
   border-radius: 4px;
+}
+
+.one-star {
+  width: 18px;
+}
+
+.two-stars {
+  width: 40px;
+}
+
+.three-stars {
+  width: 64px;
+}
+
+.four-stars {
+  width: 88px;
 }
 
 .pagination {

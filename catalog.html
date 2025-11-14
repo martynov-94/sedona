@@ -79,12 +79,12 @@
               </label>
             </fieldset>
             <fieldset class="settings-group settings-house-type">
-              <legend class="settings-group-title">Тип жилья:</legend>
+              <legend class="settings-group-title">Тип Жилья:</legend>
               <label class="settings-house-type-label">
                 <input class="settings-house-type-radio" type="radio" name="house-type" value="hotel" checked>Гостиница
               </label>
               <label class="settings-house-type-label">
-                <input class="settings-house-type-radio" type="radio" name="house-type" value="motel">Отель
+                <input class="settings-house-type-radio" type="radio" name="house-type" value="motel">Мотель
               </label>
               <label class="settings-house-type-label">
                 <input class="settings-house-type-radio" type="radio" name="house-type" value="apartment">Апартаменты
@@ -104,7 +104,17 @@
                     value="9000">
                 </div>
               </div>
-              <input class="settings-price-slider" type="range" min="0" max="10000" value="8000" step="100">
+              <!-- <input class="settings-price-slider" type="range" min="0" max="10000" value="8000" step="100"> -->
+              <div class="range-full-bar">
+                <div class="range-filled-bar" style="left: 0; width: 226px">
+                  <button class="range-toggle toggle-min">
+                    <span class="visually-hidden">Изменить минимальную цену</span>
+                  </button>
+                  <button class="range-toggle toggle-max">
+                    <span class="visually-hidden">Изменить максимальную цену</span>
+                  </button>
+                </div>
+              </div>
             </fieldset>
             <fieldset class="settings-group settings-buttons">
               <legend class="visually-hidden">Применить или сбросить настройки</legend>
@@ -123,7 +133,7 @@
             </select>
             <ul class="view-types-list">
               <li class="view-types-item">
-                <a class="view-type view-type-tile" href="catalog.html?view=tile">
+                <a class="view-type view-type-tile view-type-chosen" href="catalog.html?view=tile">
                   <img class="view-type-icon" src="images/icons/grid-view.svg" width="16" height="14" alt="Сетка">
                 </a>
               </li>
