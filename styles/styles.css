@@ -398,32 +398,39 @@ body {
   align-items: center;
   width: 47px;
   height: 40px;
+}
+
+.social-link::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
 
   -webkit-mask: no-repeat center;
   mask: no-repeat center;
   background-color: #83b3d3;
 }
 
-.social-link:hover,
-.social-link:focus {
+.social-link:hover::before,
+.social-link:focus::before {
   background-color: #68a2ca;
 }
 
-.social-link:active {
+.social-link:active::before {
   background-color: rgba(104, 162, 202, 0.3);
 }
 
-.social-vk {
+.social-vk::before {
   -webkit-mask-image: url("../images/icons/vk.svg");
   mask-image: url("../images/icons/vk.svg");
 }
 
-.social-tg {
+.social-tg::before {
   -webkit-mask-image: url("../images/icons/telegram.svg");
   mask-image: url("../images/icons/telegram.svg");
 }
 
-.social-yt {
+.social-yt::before {
   -webkit-mask-image: url("../images/icons/youtube.svg");
   mask-image: url("../images/icons/youtube.svg");
 }
@@ -765,6 +772,14 @@ body {
   text-decoration: none;
 }
 
+.breadcrumbs-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .settings-form {
   display: flex;
 }
@@ -970,14 +985,17 @@ body {
 }
 
 .view-settings-select {
+  position: relative;
+
   width: 292px;
   margin-right: 70px;
-  padding: 14px 20px;
+  padding: 12px 20px;
 
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
 
+  background: url("../images/icons/arrow-down.svg") no-repeat top 20px right 18px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   appearance: none;
@@ -992,9 +1010,7 @@ body {
   list-style-type: none;
 }
 
-.view-types-item {
-
-}
+.view-types-item {}
 
 .view-type {
   display: flex;
@@ -1033,7 +1049,7 @@ body {
   width: 100%;
   height: 1px;
 
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
 }
 
 .hotel-card {
@@ -1043,15 +1059,22 @@ body {
   gap: 16px 20px;
   padding: 20px;
 
-  border: 1px solid #E6E6E6;
+  outline: 1px solid #e6e6e6;
   border-radius: 4px;
 }
 
 .hotel-card-link {
+  display: flex;
+  flex-direction: column;
   grid-column: 1 / -1;
 
   color: #000000;
   text-decoration: none;
+}
+
+.hotel-card-image {
+  /* display: block; */
+  margin-bottom: 16px;
 }
 
 .hotel-card-name {
@@ -1159,6 +1182,9 @@ body {
 }
 
 .pagination-item-dots {
+  font-size: 22px;
+  font-weight: 400;
+
   background-color: transparent;
 }
 
