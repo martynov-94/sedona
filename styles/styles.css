@@ -776,8 +776,16 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.breadcrumbs-home-link:hover {
+  opacity: 0.6;
+}
+
 .breadcrumbs-link:active {
   color: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumbs-home-link:active {
+  opacity: 0.3;
 }
 
 .settings-form {
@@ -1001,6 +1009,18 @@ body {
   appearance: none;
 }
 
+.view-settings-select:hover,
+.view-settings-select:focus {
+  outline: none;
+  border-color: #68a2ca;
+}
+
+.view-settings-select:disabled {
+  color: #000000;
+  border-color: #000000;
+  opacity: 0.3;
+}
+
 .view-types-list {
   display: flex;
   gap: 8px;
@@ -1009,8 +1029,6 @@ body {
 
   list-style-type: none;
 }
-
-.view-types-item {}
 
 .view-type {
   display: flex;
@@ -1021,10 +1039,20 @@ body {
 
   border: 2px solid #E5E5E5;
   border-radius: 4px;
+  outline: none;
 }
 
 .view-type-chosen {
   border-color: #000000;
+}
+
+.view-type:hover,
+.view-type:active {
+  border-color: #000000;
+}
+
+.view-type:focus {
+  border-color: #68a2ca;
 }
 
 .hotels-list {
