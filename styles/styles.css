@@ -782,12 +782,92 @@ body {
   display: none;
 }
 
+.modal-inputs-container {
+  display: flex;
+  align-items: center;
+}
+
+.modal-inputs-container:not(:last-of-type) {
+  margin-bottom: 48px;
+}
+
 .modal-date-label {
+  flex-basis: 137px;
+
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
 }
 
+.modal-date-input-container {
+  position: relative;
+
+  flex-grow: 1;
+}
+
+.modal-input {
+  padding: 12px 20px;
+
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+
+  background: #f2f2f2;
+  border-radius: 4px;
+  border: none;
+}
+
+.modal-date-input {
+  width: 100%;/
+}
+
+.modal-date-status {
+  position: absolute;
+  top: 36px;
+  left: 20px;
+
+  font-size: 16px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.modal-date-status-error {
+  color: #ff5757;
+}
+
+.modal-visitors-input {
+  width: 110px;
+  padding-left: 48px;
+  padding-right: 48px;
+
+  text-align: center;
+}
+
+.modal-visitors-grown-ups {
+  margin-right: auto;
+}
+
+.modal-kids-grown-ups {
+  flex-basis: 225px;
+}
+
+.modal-send-button {
+  padding: 18px;
+
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  background: #83b3d3;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
 
 /* Страница каталога */
 /* Настройки поиска */
