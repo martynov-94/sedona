@@ -83,7 +83,7 @@ body {
   border-radius: 4px;
   border: none;
 
-  transition: 0.3s;
+  transition: background-color 0.3s;
 }
 
 .clickable-block:hover {
@@ -717,6 +717,78 @@ body {
   border-radius: 0 4px 4px 0;
 }
 
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal-window {
+  position: relative;
+
+  width: 717px;
+  margin: auto;
+  padding: 64px 70px;
+
+  background: #ffffff;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 64px;
+  right: 52px;
+
+  width: 52px;
+  height: 52px;
+
+  background: #f2f2f2 url("../images/icons/modal-close-button.svg") no-repeat center;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 64px;
+
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.modal-form-fieldset {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.modal-form-legend {
+  display: none;
+}
+
+.modal-date-label {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+
 /* Страница каталога */
 /* Настройки поиска */
 
@@ -1040,6 +1112,7 @@ body {
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   outline: none;
+  user-select: none;
 }
 
 .view-type-chosen {
@@ -1195,13 +1268,24 @@ body {
   border-radius: 4px;
 }
 
+.pagination-item-default:hover,
+.pagination-item-default:focus {
+  background-color: #68a2ca;
+  outline: 1px solid #82b3d3;
+  outline-offset: -1px;
+}
+
+.pagination-item-default:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .pagination-link {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60px;
 
-  color: #ffffff;
+  color: inherit;
   text-decoration: none;
 }
 
