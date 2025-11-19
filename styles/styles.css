@@ -755,6 +755,20 @@ body {
   cursor: pointer;
 }
 
+.modal-close-button:hover,
+.modal-close-button:focus {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:focus {
+  outline: 3px solid #82b3d3;
+}
+
+.modal-close-button:active {
+  outline: none;
+  opacity: 0.3;
+}
+
 .modal-title {
   margin: 0;
   margin-bottom: 64px;
@@ -820,7 +834,16 @@ body {
 }
 
 .modal-date-input {
-  width: 100%;/
+  width: 100%;
+}
+
+.modal-date-input:hover,
+.modal-date-input:focus {
+  background-color: #e6e6e6;
+}
+
+.modal-date-input:focus {
+  outline: 3px solid #83b3d3;
 }
 
 .modal-date-status {
@@ -877,6 +900,7 @@ body {
 
 .modal-visitors-change-button {
   width: 40px;
+  padding: 0;
 
   background: transparent no-repeat center;
   border: none;
@@ -885,7 +909,7 @@ body {
 
 .modal-visitors-change-button:hover,
 .modal-visitors-change-button:focus {
-  opacity: 0.5;
+  background-color: #e9e9e9;
 }
 
 .modal-visitors-change-button:active {
