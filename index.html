@@ -190,7 +190,7 @@
                 <label class="modal-date-label" for="check-in-date">Дата Заезда:</label>
                 <div class="modal-date-input-container">
                   <input class="modal-input modal-date-input" id="check-in-date" type="text" value="27 апреля 2020"
-                    placeholder="1 января 1970">
+                    placeholder="1 января 1970" required>
                   <p class="modal-date-status modal-date-status-error">Мы не можем отправить вас в прошлое.</p>
                 </div>
               </div>
@@ -198,7 +198,7 @@
                 <label class="modal-date-label" for="check-out-date">Дата Выезда:</label>
                 <div class="modal-date-input-container">
                   <input class="modal-input modal-date-input" id="check-out-date" type="text" value="1 сентября 2023"
-                    placeholder="1 января 1970">
+                    placeholder="1 января 1970" required>
                   <p class="modal-date-status">На эти даты есть свободные номера. Пока есть.</p>
                 </div>
 
@@ -208,10 +208,27 @@
               <legend class="modal-form-legend">Количество заселяющихся</legend>
               <div class="modal-inputs-container">
                 <label class="modal-date-label" for="grown-ups-number">Взрослые:</label>
-                <input class="modal-input modal-visitors-input modal-visitors-grown-ups" id="grown-ups-number" type="number" min="1" max="99" step="1"
-                  value="2">
+                <div class="modal-visitors-input-container">
+                  <input class="modal-input modal-visitors-input modal-visitors-grown-ups" id="grown-ups-number"
+                    type="number" min="1" max="99" step="1" value="2" required>
+                  <div class="modal-visitors-buttons-container">
+                    <button class="modal-visitors-change-button modal-visitors-change-button-minus" type="button"><span
+                        class="visually-hidden">Уменьшить</span></button>
+                    <button class="modal-visitors-change-button modal-visitors-change-button-plus" type="button"><span
+                        class="visually-hidden">Увеличить</span></button>
+                  </div>
+                </div>
                 <label class="modal-date-label" for="kids-number">Дети:</label>
-                <input class="modal-input modal-visitors-input modal-visitors-kids" id="kids-number" type="number" min="1" max="99" step="1" value="2">
+                <div class="modal-visitors-input-container">
+                  <input class="modal-input modal-visitors-input modal-visitors-kids" id="kids-number" type="number"
+                    min="1" max="99" step="1" value="2" required>
+                  <div class="modal-visitors-buttons-container">
+                    <button class="modal-visitors-change-button modal-visitors-change-button-minus" type="button"><span
+                        class="visually-hidden">Уменьшить</span></button>
+                    <button class="modal-visitors-change-button modal-visitors-change-button-plus" type="button"><span
+                        class="visually-hidden">Увеличить</span></button>
+                  </div>
+                </div>
               </div>
             </fieldset>
             <input class="modal-send-button" type="submit" value="Найти">
