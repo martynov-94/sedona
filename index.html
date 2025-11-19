@@ -189,16 +189,16 @@
               <div class="modal-inputs-container">
                 <label class="modal-date-label" for="check-in-date">Дата Заезда:</label>
                 <div class="modal-date-input-container">
-                  <input class="modal-input modal-date-input" id="check-in-date" type="text"
-                    placeholder="Укажите дату" required>
+                  <input class="modal-input modal-date-input" id="check-in-date" type="text" placeholder="Укажите дату"
+                    value="27 апреля 2020" required>
                   <p class="modal-date-status modal-date-status-error">Мы не можем отправить вас в прошлое.</p>
                 </div>
               </div>
               <div class="modal-inputs-container">
                 <label class="modal-date-label" for="check-out-date">Дата Выезда:</label>
                 <div class="modal-date-input-container">
-                  <input class="modal-input modal-date-input" id="check-out-date" type="text"
-                    placeholder="Укажите дату" required>
+                  <input class="modal-input modal-date-input" id="check-out-date" type="text" placeholder="Укажите дату"
+                    value="1 сентября 2023" required>
                   <p class="modal-date-status">На эти даты есть свободные номера. Пока есть.</p>
                 </div>
 
@@ -218,10 +218,18 @@
                         class="visually-hidden">Увеличить</span></button>
                   </div>
                 </div>
-                <label class="modal-date-label" for="kids-number">Дети:</label>
+                <label class="modal-date-label modal-kids-date-label" for="kids-number">Дети:
+                  <button class="modal-info-button modal-kids-info-button" type="button"><span
+                      class="visually-hidden">Подробнее</span>
+                    <p class="modal-tooltip modal-kids-tooltip">Укажите количество детей, которые будут с вами, возраст
+                      которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
+                  </button>
+
+                </label>
                 <div class="modal-visitors-input-container">
                   <input class="modal-input modal-visitors-input modal-visitors-kids" id="kids-number" type="number"
                     min="1" max="99" step="1" value="2" required>
+
                   <div class="modal-visitors-buttons-container">
                     <button class="modal-visitors-change-button modal-visitors-change-button-minus" type="button"><span
                         class="visually-hidden">Уменьшить</span></button>

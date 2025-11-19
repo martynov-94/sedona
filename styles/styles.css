@@ -813,6 +813,66 @@ body {
   font-weight: 700;
 }
 
+.modal-kids-date-label {
+  position: relative;
+}
+
+.modal-info-button {
+  position: absolute;
+  content: "";
+
+  width: 26px;
+  height: 26px;
+  margin-left: 10px;
+  padding: 0;
+
+  background: #83b3d3 url("../images/icons/modal-info-icon.svg") no-repeat center;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.modal-tooltip {
+  position: absolute;
+  top: 40px;
+  left: 13px;
+  transform: translateX(-50%);
+
+  display: none;
+  width: 256px;
+  margin: 0;
+  padding: 15px 18px 18px 22px;
+
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: left;
+
+  background: #333333;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+
+  cursor: default;
+}
+
+.modal-tooltip::before {
+  position: absolute;
+  content: "";
+  top: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 19px;
+  height: 9px;
+
+  background: url("../images/icons/modal-arrow-up.svg") no-repeat center;
+}
+
+.modal-info-button:hover .modal-tooltip {
+  display: block;
+}
+
 .modal-date-input-container {
   position: relative;
 
@@ -894,26 +954,37 @@ body {
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .modal-visitors-change-button {
-  width: 40px;
+  width: 20px;
+  height: 20px;
   padding: 0;
 
   background: transparent no-repeat center;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
+  opacity: 0.2;
 }
 
 .modal-visitors-change-button:hover,
 .modal-visitors-change-button:focus {
-  background-color: #e9e9e9;
+  opacity: 1;
+}
+
+.modal-visitors-change-button:focus {
+  outline: 3px solid #82b3d3;
 }
 
 .modal-visitors-change-button:active {
-  opacity: 0.9;
+  opacity: 0.2;
+  outline: none;
 }
 
 .modal-visitors-change-button-minus {
@@ -942,6 +1013,15 @@ body {
   border-radius: 10px;
   border: none;
   cursor: pointer;
+}
+
+.modal-send-button:hover,
+.modal-send-button:focus {
+  background-color: #68a2c2;
+}
+
+.modal-send-button:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /* Страница каталога */
