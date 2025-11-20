@@ -54,6 +54,7 @@ img {
 /* Общие стили для обеих страниц */
 
 body {
+  min-width: 1200px;
   height: 100%;
   margin: 0;
 
@@ -63,7 +64,17 @@ body {
   color: #333333;
 
   background-color: #f2f2f2;
+}
 
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  min-height: 100%;
+  margin: 0 auto;
+
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .clickable-block {
@@ -193,16 +204,7 @@ body {
   color: #ffffff;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  width: 1200px;
-  min-height: 100%;
-  margin: 0 auto;
 
-  background-color: #ffffff;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
 
 
 /* Хэдер */
@@ -724,9 +726,13 @@ body {
   right: 0;
   bottom: 0;
 
-  display: flex;
+  display: none;
 
   background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal-container-opened {
+  display: flex;
 }
 
 .modal-window {
@@ -815,16 +821,21 @@ body {
 
 .modal-kids-date-label {
   position: relative;
+
+  flex-basis: 132px;
 }
 
 .modal-info-button {
   position: absolute;
   content: "";
+  bottom: -1px;
 
   width: 26px;
   height: 26px;
-  margin-left: 10px;
+  margin-left: 11px;
   padding: 0;
+
+  font-family: inherit;
 
   background: #83b3d3 url("../images/icons/modal-info-icon.svg") no-repeat center;
   border: none;
@@ -834,15 +845,16 @@ body {
 
 .modal-tooltip {
   position: absolute;
-  top: 40px;
+  top: 41px;
   left: 13px;
   transform: translateX(-50%);
 
   display: none;
   width: 256px;
   margin: 0;
-  padding: 15px 18px 18px 22px;
+  padding: 20px 18px 23px 22px;
 
+  font-family: inherit;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
