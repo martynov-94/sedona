@@ -1181,6 +1181,26 @@ body {
   background-image: url("../images/icons/radio-circle.svg");
 }
 
+.settings-services-checkbox:hover,
+.settings-services-checkbox:focus,
+.settings-services-checkbox:active,
+.settings-house-type-radio:hover,
+.settings-house-type-radio:focus,
+.settings-house-type-radio:active {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.settings-services-checkbox:focus,
+.settings-house-type-radio:focus {
+  outline: 3px solid #83b3d3;
+  outline-offset: -1px;
+}
+
+.settings-services-checkbox:active,
+.settings-house-type-radio:active {
+  outline-width: 2px;
+}
+
 .settings-price {
   display: flex;
   flex-direction: column;
