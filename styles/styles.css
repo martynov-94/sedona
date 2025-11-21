@@ -882,6 +882,19 @@ body {
   flex-grow: 1;
 }
 
+.modal-date-input-container::after {
+  position: absolute;
+  content: "";
+  top: 16px;
+  right: 22px;
+
+  width: 16px;
+  height: 15px;
+
+  background: url("../images/icons/calendar.svg") no-repeat center;
+  opacity: 0.3;
+}
+
 .modal-input {
   padding: 12px 20px;
 
