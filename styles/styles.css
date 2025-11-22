@@ -1395,11 +1395,24 @@ body {
   width: 48px;
   height: 48px;
 
+  background: no-repeat center;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   outline: none;
 
   user-select: none;
+}
+
+.view-type-tile {
+  background-image: url("../images/icons/grid-view.svg");
+}
+
+.view-type-card {
+  background-image: url("../images/icons/card-view.svg");
+}
+
+.view-type-list {
+  background-image: url("../images/icons/list-view.svg");
 }
 
 .view-type-chosen {
